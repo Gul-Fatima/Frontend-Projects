@@ -1,0 +1,291 @@
+/* Base styles (for larger screens) */
+:root {
+    --bg: #e6b4ac;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav {
+    height: 11vh;
+    width: 100%;
+    background: #ddaaa2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .nav h1 {
+    margin: 0;
+    margin-left: 20px;
+    font-family: "Allura";
+  }
+  
+  .nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav ul li {
+    list-style-type: none;
+  }
+  
+  .nav ul li:hover {
+    text-decoration: underline;
+    color: beige;
+  }
+  
+  .headings {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin-top: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .headings img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .h-box {
+    position: absolute;
+    width: 80%;
+    max-width: 600px;
+    top: 30%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: var(--bg);
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  
+  .h-box h1 {
+    padding: 10px;
+    font-size: 3rem;
+  }
+  
+  .h-box p {
+    padding: 5px;
+    font-family: "Noto Sans Adlam Unjoined", cursive;
+    font-size: 1rem;
+  }
+  
+  .body {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  
+  .product {
+    margin: 15px;
+    min-width: 15em;
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  .product img {
+    height: 20em;
+    width: 15em;
+    border-radius: 12px;
+  }
+  
+  .name {
+    margin-left: 4px;
+    font-size: large;
+    padding: 4px;
+    border-bottom: 2px solid;
+  }
+  
+  .price {
+    padding: 4px;
+    margin-left: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .price p {
+    font-size: medium;
+    display: inline;
+  }
+  
+  .icon span:hover {
+    color: red;
+  }
+  
+  .cus {
+    border-top: 5px solid #dab0aa;
+    padding: 40px 40px;
+    padding-bottom: 0px;
+    text-decoration: underline;
+    background: var(--bg);
+  }
+  
+  .screen-body {
+    display: flex;
+    background: var(--bg);
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .app-form {
+    width: 100%;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 5px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #5f5959;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #666;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color: #131212;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #f3eaed;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .h-box {
+      font-size: 2rem;
+    }
+    .h-box h1 {
+      font-size: 2.5rem;
+    }
+    .screen-body {
+      flex-direction: column;
+    }
+    .screen-body-item {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav ul {
+      gap: 10px;
+    }
+    .h-box {
+      width: 90%;
+      left: 5%;
+      font-size: 1.5rem;
+    }
+    .h-box h1 {
+      font-size: 2rem;
+    }
+    .product {
+      min-width: 12em;
+    }
+    .product img {
+      width: 12em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+    .nav h1 {
+      margin-left: 0;
+    }
+    .nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav ul li {
+      padding: 5px 0;
+    }
+    .h-box {
+      width: 90%;
+      left: 5%;
+      top: 20%;
+      font-size: 1.2rem;
+    }
+    .h-box h1 {
+      font-size: 1.5rem;
+    }
+    .body {
+      padding: 0;
+    }
+    .product {
+      min-width: 100%;
+      margin: 10px 0;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .screen-body-item {
+      padding: 10px;
+    }
+    .app-form-button {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+  
